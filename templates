@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Procrastination Timer 🍅</h1>
+        <div id="timer">25:00</div>
+        <button onclick="startTimer()">Start</button>
+        <h3>Here’s a dog to cheer you up 🐶:</h3>
+        <img src="/static/memes/{{ meme }}" class="meme" />
+    </div>
+
+    <script>
+        let timeLeft = 25 * 60;
+        let timerRunning = false;
+
+        function startTimer() {
+            if (timerRunning) return;
+            timerRunning = true;
+
+            const timer = setInterval(() => {
+                let minutes = Math.floor(timeLeft / 60);
+                let seconds = timeLeft % 60;
+                document.getElementById("timer").innerText = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                timeLeft--;
+                if (timeLeft < 0) {
+                    clearInterval(timer);
+                    alert("Break Time! You deserve another meme 🎉");
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
