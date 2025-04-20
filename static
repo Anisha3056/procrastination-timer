@@ -1,0 +1,38 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff6ec;
+    text-align: center;
+    padding: 50px;
+}
+
+.container {
+    background: #ffe0b2;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0px 0px 10px #dba676;
+    width: 50%;
+    margin: auto;
+}
+
+#timer {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 25px;
+    background-color: #ff7043;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.meme {
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px #aaa;
+    margin-top: 20px;
+}
